@@ -44,7 +44,7 @@ class CivitAI_LORA_Loader:
 
             },
             "optional": {
-                "api_key": ("STRING", {"default": "", "multiline": False}),
+                "api_key": ("STRING", {"default": os.environ.get('CIVITAI_TOKEN'), "multiline": False}),
                 "download_chunks": ("INT", {"default": 4, "min": 1, "max": 12, "step": 1}),
                 "download_path": (list(lora_paths),),
             },
